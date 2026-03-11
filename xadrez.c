@@ -5,7 +5,42 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
+    int t, b, r;
+
+    //Torre
+    t = 1;
+    printf("Torre: \n");
+    while(t <= 5){
+        printf("Direita %d\n", t);
+        t++;
+    }
+
+    printf("\n\n");
+
+    //Bispo
+    b = 1;
+    printf("Bispo: \n");
+    do {
+        printf("Cima %d\n", b);
+        printf("Direita %d\n", b);
+        b++;
+    }while(b <= 5);
+
+    printf("\n\n");
+
+    //Rainha
+    printf("Rainha: \n");
+    for (r = 1; r <= 8; r++)
+    {
+        printf("Esquerda %d\n", r);
+    }
+    
+
+
+    return 0;
+}
+
+// Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
     // Implementação de Movimentação do Bispo
@@ -27,6 +62,3 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
-}
