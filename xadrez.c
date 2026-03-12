@@ -5,35 +5,47 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    int t, b, r;
+    int t, b, r, c;
 
     //Torre
     t = 1;
     printf("Torre: \n");
     while(t <= 5){
-        printf("Direita %d\n", t);
+        printf("Direita\n");
         t++;
     }
 
-    printf("\n\n");
+    printf("\n");
 
     //Bispo
     b = 1;
     printf("Bispo: \n");
     do {
-        printf("Cima %d\n", b);
-        printf("Direita %d\n", b);
+        printf("Cima e Direita\n");
         b++;
     }while(b <= 5);
 
-    printf("\n\n");
+    printf("\n");
 
     //Rainha
     printf("Rainha: \n");
     for (r = 1; r <= 8; r++)
     {
-        printf("Esquerda %d\n", r);
+        printf("Esquerda\n");
     }
+
+    printf("\n");
+
+    //Cavalo
+    for (c = 1; c <= 1; c++)
+    {
+        for (int c2 = 1; c2 <= 2; c2++)
+        {
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+    }
+    
     
 
 
