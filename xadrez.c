@@ -4,51 +4,73 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    int t, b, r, c;
-
-    //Torre
-    t = 1;
-    printf("Torre: \n");
-    while(t <= 5){
+void moverTorre(int t){
+    if(t > 0){
         printf("Direita\n");
-        t++;
+        moverTorre(t - 1);
     }
+
+}
+
+void moverBispo(int b){
+      if(b > 0){
+        for (int vertical = 0; vertical < 1; vertical++)
+        {
+            printf("Cima ");
+            for (int horizontal = 0; horizontal < 1; horizontal++)
+            { 
+                printf("Direita\n");
+            }
+            
+        }
+        moverBispo(b - 1);
+      }
+}
+
+void moverRainha(int r){
+    if (r > 0)
+    {
+        printf("Esquerda\n");
+        moverRainha(r - 1);
+    }
+    
+}
+
+int main() {
+    //Torre
+    int t = 5;
+    printf("Torre: \n");
+    moverTorre(t);
 
     printf("\n");
 
     //Bispo
-    b = 1;
-    printf("Bispo: \n");
-    do {
-        printf("Cima e Direita\n");
-        b++;
-    }while(b <= 5);
+    int b = 5;
+    printf("Bispo:\n");
+    moverBispo(b);
 
     printf("\n");
 
     //Rainha
+    int r = 8;
     printf("Rainha: \n");
-    for (r = 1; r <= 8; r++)
-    {
-        printf("Esquerda\n");
-    }
+    moverRainha(r);    
 
     printf("\n");
 
     //Cavalo
-    for (c = 1; c <= 1; c++)
+    printf("Cavalo: \n");
+    for (int i = 0; i < 3; i++)
     {
-        for (int c2 = 1; c2 <= 2; c2++)
+        if (i == 2)
         {
-            printf("Baixo\n");
-        }
-        printf("Esquerda\n");
+            printf("Direita\n");
+            break;
+        }  
+        printf("Cima\n");
     }
     
     
-
-
     return 0;
 }
 
